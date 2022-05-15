@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class p{
+	public:
+		void fun(){
+			cout<<"hello"<<endl;
+		}
+};
+class p1:public p{
+	public:
+		void fun1(){
+			cout<<"hey"<<endl;
+		}
+};
+class p2:public p{
+	public:
+		void fun2(){
+			cout<<"hi"<<endl;
+		}
+};
+class p3:public p1,public p2{
+	public:
+		void fun3(){
+			cout<<"bye"<<endl;
+		}
+};
+int main(){
+	p3 obj;
+	obj.p1::fun();
+}
